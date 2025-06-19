@@ -1,166 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harris | Data Scientist</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #000;
-      color: #e0e0e0;
-    }
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #0d6efd;
-    }
-    .tag {
-      background: #1f1f1f;
-      color: #d1d1d1;
-      border-radius: 5px;
-      padding: 4px 8px;
-      margin: 2px;
-      display: inline-block;
-      font-size: 0.85rem;
-    }
-    .card {
-      background-color: #1e1e1e;
-      border: 1px solid #333;
-    }
-    .card:hover {
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-      transition: all 0.3s;
-    }
-    a {
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .btn-outline-primary {
-      border-color: #0d6efd;
-      color: #0d6efd;
-    }
-    .btn-outline-primary:hover {
-      background-color: #0d6efd;
-      color: #fff;
-    }
-    .btn-outline-secondary {
-      border-color: #aaa;
-      color: #aaa;
-    }
-    .btn-outline-secondary:hover {
-      background-color: #aaa;
-      color: #000;
-    }
-    .text-muted {
-      color: #ccc !important;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seena M S - Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        aside {
+            width: 30%;
+            background-color: white;
+            color: black;
+            padding: 2rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-align: left;
+        }
+        aside img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        aside h1 {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+        aside h2 {
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        aside p {
+            font-size: 0.8rem;
+            margin: 1rem 0;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin: 0.5rem 0;
+			font-size: 0.7rem;
+        }
+        aside ul li i {
+            margin-right: 0.5rem;
+        }
+        .social-icons {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: left;
+            gap: 1rem;
+        }
+        .social-icons a {
+            color: #00008B;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        main {
+            width: 70%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .projects {
+            margin-bottom: 2rem;
+        }
+        .projects h2 {
+            color: #00008B;
+			font-size: 0.7rem;
+        }
+		.projects h3 {
+            color: black;
+			font-size: 1.0rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .project-item {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+			font-size: 0.8rem;
+        }
+        .project-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .project-item div {
+            flex: 1;
+        }
+        .experience {
+            margin-top: 2rem;
+        }
+        .experience h2 {
+            color: #00008B;
+			font-size: 0.8rem;
+        }
+        .experience-item {
+            margin-bottom: 1rem;
+        }
+        .experience-item h3 {
+            margin: 0;
+            font-size: 0.8rem;
+        }
+        .experience-item p {
+            margin: 0.5rem 0;
+			font-size: 0.8rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: white;
+            color: black;
+            margin-top: 2rem;
+        }
+		.tags {
+			margin-bottom: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.tag {
+			background-color: #00008B;
+			color: white;
+			font-size: 0.8rem;
+			padding: 0.4rem 0.8rem;
+			border-radius: 20px;
+			text-align: center;
+			display: inline-block;
+			cursor: default;
+		}
+		.tags_1 {
+			margin-bottom: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.tag_1 {
+			background-color: #e0e0e0;
+			color: black;
+			font-size: 0.8rem;
+			padding: 0.4rem 0.8rem;
+			border-radius: 20px;
+			text-align: center;
+			display: inline-block;
+			cursor: default;
+		}
+    </style>
 </head>
 <body>
-  <div class="container mt-4">
-    <div class="row">
-      <!-- Sidebar -->
-      <div class="col-md-4 text-center">
-        <img src="images/exp.webp" alt="Profile" class="profile-pic mb-3">
-        <h3>Harris</h3>
-        <p class="text-muted">Data Scientist | AI Researcher</p>
-        <div class="mb-3">
-          <a href="https://github.com/harris-ai" class="me-2"><i class="fab fa-github fa-lg"></i></a>
-          <a href="https://linkedin.com/in/harris-ds" class="me-2"><i class="fab fa-linkedin fa-lg"></i></a>
-          <a href="https://medium.com/@harris" class="me-2"><i class="fab fa-medium"></i></a>
-          <a href="mailto:harris@example.com"><i class="fas fa-envelope fa-lg"></i></a>
+    <aside>
+        <img src="images/exp.webp" alt="Profile Photo">
+        <h1>Seena M S</h1>
+        <h2>Data Analyst | Ex Dubai Police Intern</h2>
+		<div class="social-icons">
+            <a href="https://github.com/SeenaManickalSulaiman" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/seenams/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@contactmeseena508" target="_blank"><i class="fab fa-medium"></i></a>
+            <a href="mailto:contactmeseena508@email.com" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="text-start">Experienced in developing data-driven applications across forensics, finance, and e-governance using AI, ML, and LLMs. Recognized by Dubai Police for deepfake detection systems.</p>
+        <p>Passionate about developing innovative AI solutions across diverse domains, with expertise in Machine Learning, 
+		Natural Language Processing, LLMOps and AI Product Development.</p>
+        
+        <h2>🛠️Skills</h2>
+        <ul>
+            <li><i class="fas fa-code"></i> <b>Languages:</b> Python, C/C++, JavaScript</li>
+			<li><i class="fas fa-brain"></i><b> Expertise:</b> Machine Learning, NLP, LLMOps</li>
 
-        <h5 class="mt-4">Technical Skills</h5>
-        <ul class="list-unstyled text-start">
-          <li><strong>Languages:</strong> Python, R, C/C++, JavaScript</li>
-          <li><strong>Expertise:</strong> ML, Deep Learning, GenAI, NLP, LLMOps</li>
-          <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib</li>
-          <li><strong>Frameworks:</strong> Scikit-learn, PyTorch, LangChain</li>
-          <li><strong>Deployment:</strong> Docker, AWS, Runpod</li>
-          <li><strong>Frontend:</strong> Streamlit, Flask, Chainlit</li>
-          <li><strong>Backend:</strong> FastAPI, Graph DB, Vector Store</li>
-          <li><strong>Version Control:</strong> Git, GitHub</li>
+
+			<li><i class="fas fa-database"></i> <b>Data Analysis:</b> Pandas, Matplotlib/Seaborn, NumPy</li>
+			<li><i class="fas fa-laptop"></i> <b>Libraries/Frameworks: </b>Scikit-learn, PyTorch, LangChain</li>
+			<li><i class="fas fa-server"></i> <b>Deployment Tools: </b>Docker, AWS </li>
+			<li><i class="fas fa-database"></i> <b> Backend Development: </b>FastAPI, Vector/Graph Database</li>
+			<li><i class="fas fa-code-branch"></i> <b>Version Control: </b>Git, GitHub</li>
         </ul>
-      </div>
+        
+        <h2>⭐Recent Achievements</h2>
+        <ul>
+            <li>Abu Dhabi Youth Challenge: Winner of Top 10 Ideas</li>
 
-      <!-- Main Content -->
-      <div class="col-md-8">
-        <h4 class="mb-3">Projects</h4>
+			
+        </ul>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Deep Eye - Multimodal GPT for Forensics</h5>
-            <p class="tag">Multimodal AI</p>
-            <p class="tag">Deepfake Detection</p>
-            <p class="tag">rPPG</p>
-            <p class="tag">LLM</p>
-            <p class="card-text">An AI-powered forensic assistant integrating deepfake video detection with WhatsApp analysis and multilingual summarization, developed for Dubai Police.</p>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Demo</a>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Code</a>
-          </div>
-        </div>
+    </aside>
+    
+    <main>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-item">
+					
+                    <img src="images/aiagent.png" alt="aiagent">
+                    <div>
+                        <h3>ANA :Agentic Corrective RAG using LangGraph</h3>
+						<div class="tags">
+						<span class="tag">NLP</span>
+						<span class="tag">Agentic RAG</span>
+						<span class="tag">LangGraph</span>
+						<span class="tag">Python</span>
+					</div>
+                        <p>Leverages LangGraph for modular workflow design and node-based task orchestration. 
+						The system integrates LLM with document retrieval and web search to mitigate hallucinations and improve response accuracy by 
+						dynamically fetching relevant context. 
+						Designed as an agentic architecture, 
+						it incorporates corrective mechanisms for enhanced reliability in query-answering workflows.</p>
+                        
+						<a href="https://huggingface.co/spaces/Safni/ANA" target="_blank">Demo</a> | <a href="https://github.com/UsmanSafni/ANA" target="_blank">Code</a>
+                    </div>
+				</div>
+					<div class="project-item">
+					
+                    <img src="images/llm.png" alt="llm">
+                    <div>
+                        <h3>LLM from scratch</h3>
+						<div class="tags">
+						<span class="tag">Transformers</span>
+						<span class="tag">Decoder</span>
+						<span class="tag">LLM Pretraining</span>
+						<span class="tag">PyTorch</span>
+					</div>
+                        <p>Implements a GPT-like language model from scratch, focusing on core components like tokenisation, multi-head attention, feedforward layers, and decoder blocks. 
+						The model is trained to generate text by predicting the next word in a sequence using a decoder-based transformer architecture. </p>
+                        
+						<a href="https://medium.com/@safniusman/build-your-own-gpt-like-model-a-beginners-guide-to-training-transformers-from-scratch-413cb2f17831" target="_blank">Blog</a> | <a href="https://github.com/UsmanSafni/LLM_from_scratch" target="_blank">Code</a>
+                    </div>
+					
+                </div>
+                <div class="project-item">
+                    <img src="images/fin3.png" alt="fina analysis">
+                    <div>
+                        <h3>Financial Assistant</h3>
+						<div class="tags">
+						<span class="tag">NLP</span>
+						<span class="tag">Tool-Calling Agent</span>
+						<span class="tag">LangChain</span>
+						<span class="tag">Python</span>
+					</div>
+                        <p>Provides insights into key financial metrics like liquidity, solvency, and profitability for US-SEC listed companies.
+						Leveraging LangChain's tool-calling agent, and data visualization, it dynamically 
+						generates accurate responses and interactive plots based on user queries. 
+						This solution bridges advanced NLP capabilities with financial analytics, 
+						offering a robust tool for professionals and enthusiasts alike.</p>
+                        <a href="https://huggingface.co/spaces/Safni/Financial_assistant" target="_blank">Demo</a> | <a href="https://github.com/UsmanSafni/Financial_Assistant" target="_blank">Code</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="images/spend.png" alt="spendwise">
+                    <div>
+                        <h3>Spendwise</h3>
+						<div class="tags">
+						<span class="tag">NLP</span>
+						<span class="tag">Data Analytics</span>
+						<span class="tag">PDF Extraction</span>
+						<span class="tag">Python</span>
+					</div>
+                        <p>A personal financial assistant utilizing data analytics techniques for transaction categorization, spending insights, and chat query support.</p>
+                        
+                        <a href="https://huggingface.co/spaces/Safni/spendwise_v2" target="_blank">Demo</a> | <a href="https://github.com/UsmanSafni/SpendWise" target="_blank">Code</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="images/project_planner.png" alt="planner">
+                    <div>
+                        <h3>Multi Agent</h3>
+						<div class="tags">
+						<span class="tag">NLP</span>
+						<span class="tag">Multi Agents</span>
+						<span class="tag">CrewAI</span>
+						<span class="tag">Python</span>
+					</div>
+                        <p>Leverages a robust multi-agent system to generate detailed project plans tailored to user inputs. It features dynamic project planning,
+employing a multi-agent architecture for task decomposition, resource estimation, and effective allocation.</p>
+                        <a href="https://huggingface.co/spaces/Safni/Autoplan_AI" target="_blank">Demo</a> | <a href="https://github.com/UsmanSafni/Autoplan_AI" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+		
+        </section>
+		
+		<section class="experience">
+            <h2>Research Works</h2>
+            <div class="experience-item">
+                
+				<a href="https://ieeexplore.ieee.org/document/9153989" target="_blank" style="font-size: 12px;">➡️S. Parvathy, T. Safni Usman and K. Harikrishnan, ”Energy Management via Anomaly Detection for Manufacturing Enterprises,” 2020 International Conference for Emerging Technology (INCET), Belgaum, India, 2020, pp. 1-7, doi: 10.1109/INCET49848.2020.9153989.</a>
+				<p></p>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-15-8815-0_3" target="_blank" style="font-size: 12px;">➡️S. Parvathy, Nita R Patne and T. Safni Usman , ”Optimal Battery Charging Forecasting Algorithms for Domestic Applications and Electric Vehicles by Comprehending Sustainable Energy”, Control Applications in Modern Power System, 2021, Volume 710, ISBN : 978-981-15-8814-3.</a>
+            </div>
+            
+            
+        </section>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Mind Bloom - Emotional AI for Kids</h5>
-            <p class="tag">Emotional AI</p>
-            <p class="tag">Early Childhood</p>
-            <p class="tag">Voice Assistant</p>
-            <p class="card-text">Wearable emotional support AI avatar that mimics a parent's voice and face to help young children express and manage feelings without screen time.</p>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Pitch</a>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Demo</a>
-          </div>
-        </div>
+        <section class="experience">
+            <h2>Experience</h2>
+			
+			
+			
+            <div class="experience-item">
+                <h3>AI/ML Engineer(Freelance), Omdena</h3>
+                <p>2024 Aug - Present</p>
+				<div class="tags_1">
+						<span class="tag_1">Applied AI</span>
+						<span class="tag_1">NLP</span>
+						<span class="tag_1">Computer Vision</span>
+						<span class="tag_1">Python</span>
+				</div>
+				
+                <p>Collaborated on applied AI projects focusing on Legal and Helathcare domains, employing state-of-the-art AI techniques.</p>
+            </div>
+			
+			<div class="experience-item">
+                <h3>AI Resident, Decoding Data Science</h3>
+                <p>2024 Apr - Mar 2025</p>
+				<div class="tags_1">
+						<span class="tag_1">Applied AI</span>
+						<span class="tag_1">NLP</span>
+						<span class="tag_1">Python</span>
+						
+				</div>
+                <p>Developed comprehensive AI solutions tailored for the financial sector, enhancing data-driven decision-making and operational efficiency.</p>
+            </div>
+            
+			<div class="experience-item">
+                <h3>Innovator, Abu Dhabi Early Childhood Authority</h3>
+                <p>2024 Oct - 2024 Dec</p>
+				<div class="tags_1">
+						<span class="tag_1">Applied AI</span>
+						<span class="tag_1">NLP</span>
+						<span class="tag_1">Python</span>
+				</div>
+				
+                <p>Spear-headed the development of AI-powered solutions tailored to the early childhood development sector, 
+				focusing on empowering parents with cutting-edge tools for intentional parenting for the prestigious ADYC Startup Post Program.</p>
+            </div>
+			<div class="experience-item">
+                <h3>Professional and Applied Technology Instructor, Whitehat Jr</h3>
+                <p>2020 Jul - 2023 Feb</p>
+				<div class="tags_1">
+						<span class="tag_1">Data Analytics</span>
+						<span class="tag_1">Machine Learning</span>
+					
+						<span class="tag_1">Python</span>
+				</div>
+                <p>Delivered a professional technology curriculum to aspiring software developers.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Software Engineer, Bosch</h3>
+                <p>2017 Aug - 2020 Apr</p>
+				<div class="tags_1">
+						<span class="tag_1">Embedded C/C++</span>
+						<span class="tag_1">Software Developmnet</span>
+						<span class="tag_1">Communication Protocols</span>
+						<span class="tag_1">Automotive</span>
+				</div>
+                <p>Developed software for Emdedded Systems particulay automotive domain, contributing to the development and optimization of software for industrial applications.</p>
+            </div>
+            
+        </section>
+		<section class="experience">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>M.Tech : Electronics Design Technology</h3>
+				<p>🎖️First Class with Honours</p>
+                <p>National Institute of Electronics and Information Technology, Calicut, India</p>
+                
+            </div>
+            <div class="experience-item">
+                <h3>B.Tech : Electronics and Communication Engineering</h3>
+				<p>🎖️First Class with Honours</p>
+                <p>Government Engineering College, Palakkad, India</p>
+                
+            </div>
+            
+        </section>
+				<footer>
+        <p>&copy; 2024 Safni Usman </p>
+        </footer>
+    </main>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">DocuQuery - Document Q&A Assistant</h5>
-            <p class="tag">RAG</p>
-            <p class="tag">LangChain</p>
-            <p class="tag">Groq</p>
-            <p class="card-text">A fast and private LLM-based chatbot that summarizes and answers questions from PDF/DOCX/TXT documents locally using Groq and LangChain.</p>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Demo</a>
-            <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
-          </div>
-        </div>
 
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">FinPilot - AI Financial Assistant</h5>
-            <p class="tag">Tool Calling</p>
-            <p class="tag">YFinance</p>
-            <p class="tag">Tavily</p>
-            <p class="card-text">An AI-powered assistant to get instant, real-time answers on financial questions like market trends, company insights, and portfolio performance.</p>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Demo</a>
-            <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
-          </div>
-        </div>
-
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">HoldOn AI - Customer Churn Prediction</h5>
-            <p class="tag">ML</p>
-            <p class="tag">Churn Analysis</p>
-            <p class="tag">Customer Retention</p>
-            <p class="card-text">A predictive model to identify at-risk customers and provide retention strategies using historical behavior and engagement patterns.</p>
-            <a href="#" class="btn btn-outline-secondary btn-sm">Demo</a>
-            <a href="#" class="btn btn-outline-secondary btn-sm">GitHub</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 </body>
 </html>
